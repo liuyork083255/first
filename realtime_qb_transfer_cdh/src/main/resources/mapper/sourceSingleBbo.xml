@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sumscope.cdh.realtime.transfer.mapper.SourceSingleBboMapper">
+
+    <insert id="insertSourceSingleBboModel" parameterType="java.util.List">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        INSERT into `bond_best_offer_qbmsg_fmt`
+        (
+            `uuid`,
+            `createTime`,
+            `modifyTime`,
+            `singleBboMonth`,
+            `fbar`,
+            `vol`,
+            `pri`,
+            `ldp`,
+            `gc`,
+            `id`,
+            `cn`,
+            `ps`,
+            `ver`,
+            `lm`,
+            `reb`,
+            `ct`,
+            `bklm`,
+            `yd`,
+            `sym`,
+            `bk`,
+            `ds`,
+            `np`,
+            `ldnp`,
+            `qt`,
+            `cid`,
+            `mt`,
+            `sts`,
+            `gsn`,
+            `pdesc`,
+            `fv`,
+            `fr`,
+            `fbad`,
+            `businessCode`
+        )
+        VALUES
+        <foreach collection="list" item="model" index="index" separator=",">
+            (
+                #{model.uuid},
+                #{model.createTime},
+                #{model.modifyTime},
+                #{model.singleBboMonth},
+                #{model.fbar},
+                #{model.vol},
+                #{model.pri},
+                #{model.ldp},
+                #{model.gc},
+                #{model.id},
+                #{model.cn},
+                #{model.ps},
+                #{model.ver},
+                #{model.lm},
+                #{model.reb},
+                #{model.ct},
+                #{model.bklm},
+                #{model.yd},
+                #{model.sym},
+                #{model.bk},
+                #{model.ds},
+                #{model.np},
+                #{model.ldnp},
+                #{model.qt},
+                #{model.cid},
+                #{model.mt},
+                #{model.sts},
+                #{model.gsn},
+                #{model.pdesc},
+                #{model.fv},
+                #{model.fr},
+                #{model.fbad},
+                #{model.businessCode}
+            )
+        </foreach>
+    </insert>
+</mapper>

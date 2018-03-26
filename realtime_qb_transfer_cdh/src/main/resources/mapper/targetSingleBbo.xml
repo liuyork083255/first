@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sumscope.cdh.realtime.transfer.mapper.TargetSingleBboMapper">
+
+    <insert id="insertTargetSingleBboModel" parameterType="TargetSingleBboDBModel">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        INSERT into `bond_best_offer_webbond_fmt`
+        (
+        `quoteMonth`,
+        `updateDateTime`,
+        `transType`,
+        `bidOrAsk`,
+        `locMsgCrtAt`,
+        `uniDataID`,
+        `messageType`,
+        `id`,
+        `createTime`,
+        `modifyTime`,
+        `bondKey`,
+        `listedMarket`,
+        `code`,
+        `shortName`,
+        `side`,
+        `quoteInstitution`,
+        `trader`,
+        `brokerId`,
+        `quoteType`,
+        `internally`,
+        `status`,
+        `dealStatus`,
+        `isExercise`,
+        `bargainFlag` ,
+        `relationFlag`,
+        `rebate`,
+        `volume`,
+        `ytm`,
+        `price`,
+        `priceDescription`,
+        `cleanPrice`,
+        `dirtyPrice`,
+        `priceStr`,
+        `volumeStr`,
+        `volumeDesc`
+        )
+        VALUES
+        <foreach collection="list" item="model" index="index" separator=",">
+            (
+                #{model.quoteMonth},
+                #{model.updateDateTime},
+                #{model.transType},
+                #{model.bidOrAsk},
+                #{model.locMsgCrtAt},
+                #{model.uniDataID},
+                #{model.messageType},
+                #{model.id},
+                #{model.createTime},
+                #{model.modifyTime},
+                #{model.bondKey},
+                #{model.listedMarket},
+                #{model.code},
+                #{model.shortName},
+                #{model.side},
+                #{model.quoteInstitution},
+                #{model.trader},
+                #{model.brokerId},
+                #{model.quoteType},
+                #{model.internally},
+                #{model.status},
+                #{model.dealStatus},
+                #{model.isExercise},
+                #{model.bargainFlag},
+                #{model.relationFlag},
+                #{model.rebate},
+                #{model.volume},
+                #{model.ytm},
+                #{model.price},
+                #{model.priceDescription},
+                #{model.cleanPrice},
+                #{model.dirtyPrice},
+                #{model.priceStr},
+                #{model.volumeStr},
+                #{model.volumeDesc}
+            )
+        </foreach>
+    </insert>
+</mapper>

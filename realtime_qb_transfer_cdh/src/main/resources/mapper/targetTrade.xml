@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sumscope.cdh.realtime.transfer.mapper.TargetTradeMapper">
+
+    <insert id="insertTargetTradeModel" parameterType="TargetTradeDBModel">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        replace into `bond_trade_webbond_fmt`
+        (
+            `bondKey`,
+            `listedMarket`,
+            `tradeId`,
+            `brokerId`,
+            `brokerName`,
+            `dealType`,
+            `remaintTime`,
+            `bondCode`,
+            `shortName`,
+            `dealPrice`,
+            `cdcValuation`,
+            `csiValuation`,
+            `issuerBondRating`,
+            `expection`,
+            `ratingInstitutionName`,
+            `updateTime`,
+            `remaintTimeValue`,
+            `dealPriceValue`,
+            `cdcValuationValue`,
+            `csiValuationValue`,
+            `status`,
+            `dealStatus`,
+            `updateDateTime`,
+            `createDateTime`,
+            `transType`,
+            `pinyinFull`,
+            `ratingInstitutionPinyin`,
+            `expectionValue`,
+            `expectionSortValue`,
+            `restSymbolDays`,
+            `cleanPrice`,
+            `ytm`,
+            `restSymbolDaysExchange`,
+            `settlementDate`,
+            `businessCode`
+        )
+        VALUES
+        <foreach collection="list" item="model" index="index" separator=",">
+            (
+                #{model.bondKey},
+                #{model.listedMarket},
+                #{model.tradeId},
+                #{model.brokerId},
+                #{model.brokerName},
+                #{model.dealType},
+                #{model.remaintTime},
+                #{model.bondCode},
+                #{model.shortName},
+                #{model.dealPrice},
+                #{model.cdcValuation},
+                #{model.csiValuation},
+                #{model.issuerBondRating},
+                #{model.expection},
+                #{model.ratingInstitutionName},
+                #{model.updateTime},
+                #{model.remaintTimeValue},
+                #{model.dealPriceValue},
+                #{model.cdcValuationValue},
+                #{model.csiValuationValue},
+                #{model.status},
+                #{model.dealStatus},
+                #{model.updateDateTime},
+                #{model.createDateTime},
+                #{model.transType},
+                #{model.pinyinFull},
+                #{model.ratingInstitutionPinyin},
+                #{model.expectionValue},
+                #{model.expectionSortValue},
+                #{model.restSymbolDays},
+                #{model.cleanPrice},
+                #{model.ytm},
+                #{model.restSymbolDaysExchange},
+                #{model.settlementDate},
+                #{model.businessCode}
+            )
+        </foreach>
+
+    </insert>
+</mapper>

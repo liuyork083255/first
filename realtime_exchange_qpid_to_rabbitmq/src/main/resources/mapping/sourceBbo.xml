@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sumscope.cdh.realtime.mapper.BondMapper">
+
+    <insert id="insertBondModel" parameterType="java.util.List">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        INSERT into `bond_market_stream_from_qb`
+        (
+            `uuid`,
+            `createTime`,
+            `modifyTime`,
+            `bboMonth`,
+            `MS_lastDealPrice`,
+            `MS_OPERATE`,
+            `MS_GOODS_CODE`,
+            `MS_BOND_KEY_LISTED_MARKET`,
+            `MS_BestVersion`,
+            `MS_lastDealNetPrice`,
+            `MS_TYPE`,
+            `MS_BOND_KEY`,
+            `MS_bidPrice`,
+            `MS_ofrYield`,
+            `MS_ofrOfferId`,
+            `MS_bidOfferId`,
+            `MS_bidYield`,
+            `MS_ofrNetPrice`,
+            `MS_ofrPrice`,
+            `MS_ofrVolume`,
+            `MS_bidNetPrice`,
+            `MS_goodsCode`,
+            `MS_createTime`,
+            `MS_bidVolume`,
+            `MS_bidFlagRelation`,
+            `MS_bidRebate`,
+            `MS_ofrPriceDescription`,
+            `MS_bidPriceDescription`,
+            `MS_ofrFlagBargain`,
+            `MS_ofrRebate`,
+            `MS_bidExercise`,
+            `MS_bidFlagBargain`,
+            `MS_ofrFlagRelation`,
+            `MS_ofrExercise`,
+            `MS_COMPANY_ID`,
+            `MS_CREATE_TIME`,
+            `MS_Version`,
+            `MS_MODIFY_TIME`,
+            `MS_LISTED_MARKET`
+        )
+        VALUES
+        <foreach collection="list" item="model" index="index" separator=",">
+            (
+                #{model.uuid},
+                #{model.createTime},
+                #{model.modifyTime},
+                #{model.bboMonth},
+                #{model.MS_lastDealPrice},
+                #{model.MS_OPERATE},
+                #{model.MS_GOODS_CODE},
+                #{model.MS_BOND_KEY_LISTED_MARKET},
+                #{model.MS_BestVersion},
+                #{model.MS_lastDealNetPrice},
+                #{model.MS_TYPE},
+                #{model.MS_BOND_KEY},
+                #{model.MS_bidPrice},
+                #{model.MS_ofrYield},
+                #{model.MS_ofrOfferId},
+                #{model.MS_bidOfferId},
+                #{model.MS_bidYield},
+                #{model.MS_ofrNetPrice},
+                #{model.MS_ofrPrice},
+                #{model.MS_ofrVolume},
+                #{model.MS_bidNetPrice},
+                #{model.MS_goodsCode},
+                #{model.MS_createTime},
+                #{model.MS_bidVolume},
+                #{model.MS_bidFlagRelation},
+                #{model.MS_bidRebate},
+                #{model.MS_ofrPriceDescription} ,
+                #{model.MS_bidPriceDescription},
+                #{model.MS_ofrFlagBargain},
+                #{model.MS_ofrRebate},
+                #{model.MS_bidExercise},
+                #{model.MS_bidFlagBargain},
+                #{model.MS_ofrFlagRelation},
+                #{model.MS_ofrExercise},
+                #{model.MS_COMPANY_ID},
+                #{model.MS_CREATE_TIME},
+                #{model.MS_Version},
+                #{model.MS_MODIFY_TIME},
+                #{model.MS_LISTED_MARKET}
+            )
+        </foreach>
+    </insert>
+</mapper>

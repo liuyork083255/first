@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sumscope.cdh.realtime.transfer.mapper.SourceTradeMapper">
+
+    <insert id="insertSourceTradeModel" parameterType="SourceTradeDBModel">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+
+        replace into `bond_trade_qbmsg_fmt`
+        (
+            `createTime`,
+            `modifyTime`,
+            `MS_OPERATE`,
+            `MS_GOODS_ID`,
+            `MS_GOODS_CODE`,
+            `MS_COMPANY_NAME`,
+            `MS_BOND_KEY_LISTED_MARKET`,
+            `MS_TYPE`,
+            `MS_BOND_KEY`,
+            `MS_id`,
+            `MS_price`,
+            `MS_fullPrice`,
+            `MS_goodsShortName`,
+            `MS_dealStatus`,
+            `MS_netPrice`,
+            `MS_rebate`,
+            `MS_goodsCode`,
+            `MS_createTime`,
+            `MS_yield`,
+            `MS_goodsID`,
+            `MS_volume`,
+            `MS_exercise`,
+            `MS_return_point`,
+            `MS_pre_close_price`,
+            `MS_COMPANY_ID`,
+            `MS_CREATE_TIME`,
+            `MS_Version`,
+            `MS_MODIFY_TIME`,
+            `MS_LISTED_MARKET`,
+            `businessCode`,
+            `internally`,
+            `status`
+        )
+        VALUES
+        <foreach collection="list" item="model" index="index" separator=",">
+            (
+                #{model.createTime},
+                #{model.modifyTime},
+                #{model.MS_OPERATE},
+                #{model.MS_GOODS_ID},
+                #{model.MS_GOODS_CODE},
+                #{model.MS_COMPANY_NAME},
+                #{model.MS_BOND_KEY_LISTED_MARKET},
+                #{model.MS_TYPE},
+                #{model.MS_BOND_KEY},
+                #{model.MS_id},
+                #{model.MS_price},
+                #{model.MS_fullPrice},
+                #{model.MS_goodsShortName},
+                #{model.MS_dealStatus},
+                #{model.MS_netPrice},
+                #{model.MS_rebate},
+                #{model.MS_goodsCode},
+                #{model.MS_createTime},
+                #{model.MS_yield},
+                #{model.MS_goodsID},
+                #{model.MS_volume},
+                #{model.MS_exercise},
+                #{model.MS_return_point},
+                #{model.MS_pre_close_price},
+                #{model.MS_COMPANY_ID},
+                #{model.MS_CREATE_TIME},
+                #{model.MS_Version},
+                #{model.MS_MODIFY_TIME},
+                #{model.MS_LISTED_MARKET},
+                #{model.businessCode},
+                #{model.internally},
+                #{model.status}
+            )
+        </foreach>
+    </insert>
+</mapper>

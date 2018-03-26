@@ -1,0 +1,619 @@
+{
+  "msg": {
+    "qbBondType": [
+      {
+        "childNodes": [
+          {
+            "code": "01",
+            "name": "国债"
+          },
+          {
+            "code": "02",
+            "name": "央票"
+          },
+          {
+            "code": "03",
+            "name": "金融债"
+          },
+          {
+            "code": "04",
+            "name": "地方债"
+          }
+        ],
+        "code": "R",
+        "name": "R"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "0506",
+            "name": "短融"
+          },
+          {
+            "code": "07",
+            "name": "中票"
+          },
+          {
+            "code": "08",
+            "name": "企业债"
+          },
+          {
+            "code": "0910",
+            "name": "公司债"
+          },
+          {
+            "code": "11",
+            "name": "PPN"
+          },
+          {
+            "code": "12",
+            "name": "NCD"
+          },
+          {
+            "code": "13",
+            "name": "ABS"
+          },
+          {
+            "code": "14",
+            "name": "其他"
+          }
+        ],
+        "code": "C",
+        "name": "C"
+      }
+    ],
+    "frequentlyUsedSector": [
+      {
+        "field": "sector",
+        "code": "GYS0201",
+        "name": "电力"
+      },
+      {
+        "field": "sector",
+        "code": "GTY0101",
+        "name": "钢铁",
+		"child": ["GTY0201"]
+      },
+      {
+        "field": "sector",
+        "code": "CJY0202",
+        "name": "煤炭",
+        "search": "煤炭开采"
+      },
+      {
+        "field": "sector",
+        "code": "JZC0201",
+        "name": "水泥",
+        "search": "水泥制造"
+      },
+      {
+        "field": "sector",
+        "code": "FDC0101",
+        "name": "房地产",
+		"child":["FDC0201","FDC0202"]
+      },
+      {
+        "field": "sector",
+        "code": "JTY0101",
+        "name": "交运",
+        "search": "交通运输",
+		"child": ["JTY0201","JTY0202","JTY0203","JTY0204","JTY0205","JTY0206","JTY0207","JTY0208"]
+      },
+      {
+        "field": "municipalType",
+        "code": "01",
+        "name": "城投"
+      },
+      {
+        "field": "bondSubType",
+        "code": "RAB",
+        "name": "铁道"
+      }
+    ],
+    "bondSubType": [
+      {
+        "childNodes": [
+          {
+            "code": "BGB",
+            "name": "记账式国债"
+          },
+          {
+            "code": "SGB",
+            "name": "储蓄式国债"
+          },
+          {
+            "code": "EGB",
+            "name": "凭证式国债"
+          }
+        ],
+        "code": "A",
+        "name": "国债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "SCB",
+            "name": "央行票据"
+          }
+        ],
+        "code": "B",
+        "name": "央票"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "LLB",
+            "name": "地方政府自发自偿"
+          },
+          {
+            "code": "TLB",
+            "name": "财政部代发代偿"
+          }
+        ],
+        "code": "C",
+        "name": "地方债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "PBB",
+            "name": "政策性银行债券"
+          }
+        ],
+        "code": "D",
+        "name": "金融债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "CCP",
+            "name": "中央企业短期融资券"
+          },
+          {
+            "code": "CSP",
+            "name": "中央企业超短期融资券"
+          },
+          {
+            "code": "LCP",
+            "name": "地方企业短期融资券"
+          },
+          {
+            "code": "LSP",
+            "name": "地方企业超短期融资券"
+          }
+        ],
+        "code": "E",
+        "name": "短融"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "CMN",
+            "name": "中央企业中期票据"
+          },
+          {
+            "code": "LMN",
+            "name": "地方企业中期票据"
+          }
+        ],
+        "code": "F",
+        "name": "中票"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "CEB",
+            "name": "中央企业债"
+          },
+          {
+            "code": "LEB",
+            "name": "地方企业债"
+          }
+        ],
+        "code": "G",
+        "name": "企业债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "PPN",
+            "name": "PPN"
+          }
+        ],
+        "code": "H",
+        "name": "PPN"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "PSB",
+            "name": "政策性银行次级债券"
+          },
+          {
+            "code": "CBB",
+            "name": "商业银行债券"
+          },
+          {
+            "code": "CSB",
+            "name": "商业银行次级债券"
+          },
+          {
+            "code": "CXB",
+            "name": "商业银行混合资本债"
+          },
+          {
+            "code": "NCB",
+            "name": "非银行金融机构债"
+          },
+          {
+            "code": "SFB",
+            "name": "特种金融债"
+          },
+          {
+            "code": "SEB",
+            "name": "证券公司债"
+          },
+          {
+            "code": "SSB",
+            "name": "证券公司短期融资券"
+          },
+          {
+            "code": "SES",
+            "name": "证券公司次级债"
+          },
+          {
+            "code": "HJB",
+            "name": "汇金债"
+          }
+        ],
+        "code": "I",
+        "name": "金融机构债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "CCB",
+            "name": "集合企业债"
+          },
+          {
+            "code": "COB",
+            "name": "集合票据"
+          }
+        ],
+        "code": "J",
+        "name": "集合债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "SCV",
+            "name": "可分离可转债"
+          },
+          {
+            "code": "CVB",
+            "name": "不可分离可转债"
+          }
+        ],
+        "code": "K",
+        "name": "可转债"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "AMP",
+            "name": "专项资产管理计划"
+          },
+          {
+            "code": "CBS",
+            "name": "个人汽车抵押贷款证券化信托"
+          },
+          {
+            "code": "LBS",
+            "name": "信贷资产证券化信托"
+          },
+          {
+            "code": "MBS",
+            "name": "个人住房抵押贷款证券化信托"
+          }
+        ],
+        "code": "L",
+        "name": "资产支持证券"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "MCD",
+            "name": "五大行同业存单"
+          },
+          {
+            "code": "SPD",
+            "name": "政策性银行同业存单"
+          },
+          {
+            "code": "SHD",
+            "name": "股份制银行同业存单"
+          },
+          {
+            "code": "CCD",
+            "name": "城商行同业存单"
+          },
+          {
+            "code": "RRD",
+            "name": "三农机构同业存单"
+          },
+          {
+            "code": "RTD",
+            "name": "村镇银行同业存单"
+          },
+          {
+            "code": "FRD",
+            "name": "外资银行同业存单"
+          },
+          {
+            "code": "OTD",
+            "name": "其他金融机构同业存单"
+          }
+        ],
+        "code": "M",
+        "name": "NCD"
+      },
+      {
+        "childNodes": [
+          {
+            "code": "INT",
+            "name": "国际机构债"
+          },
+          {
+            "code": "RAB",
+            "name": "铁道债"
+          }
+        ],
+        "code": "N",
+        "name": "其他"
+      }
+    ],
+    "bondResidualMaturity": [
+      {
+        "code": "01",
+        "name": "<3M"
+      },
+      {
+        "code": "02",
+        "name": "3-6M"
+      },
+      {
+        "code": "03",
+        "name": "6-9M"
+      },
+      {
+        "code": "04",
+        "name": "9-12M"
+      },
+      {
+        "code": "05",
+        "name": "1-3Y"
+      },
+      {
+        "code": "06",
+        "name": "3-5Y"
+      },
+      {
+        "code": "07",
+        "name": "5-7Y"
+      },
+      {
+        "code": "08",
+        "name": "7-10Y"
+      },
+      {
+        "code": "09",
+        "name": ">=10Y"
+      }
+    ],
+    "perpetualType": [
+      {
+        "code": "01",
+        "name": "永续"
+      },
+      {
+        "code": "02",
+        "name": "非永续"
+      }
+    ],
+    "issuerType": [
+      {
+        "code": "CGE",
+        "name": "央企"
+      },
+      {
+        "code": "LGE",
+        "name": "国企"
+      },
+      {
+        "code": "PVE",
+        "name": "民企"
+      },
+      {
+        "code": "OTE",
+        "name": "其他"
+      }
+    ],
+    "municipalType": [
+      {
+        "code": "01",
+        "name": "城投"
+      },
+      {
+        "code": "02",
+        "name": "非城投"
+      },
+      {
+        "code": "03",
+        "name": "平台债"
+      }
+    ],
+    "issuerRating": [
+      {
+        "code": "07",
+        "name": "AAA+"
+      },
+      {
+        "code": "06",
+        "name": "AAA"
+      },
+      {
+        "code": "05",
+        "name": "AA+"
+      },
+      {
+        "code": "04",
+        "name": "AA"
+      },
+      {
+        "code": "03",
+        "name": "AA-"
+      },
+      {
+        "code": "02",
+        "name": "A+"
+      },
+      {
+        "code": "01",
+        "name": "其他"
+      }
+    ],
+    "bondRating": [
+      {
+        "code": "01",
+        "name": "AAA"
+      },
+      {
+        "code": "02",
+        "name": "A-1"
+      },
+      {
+        "code": "03",
+        "name": "AA+"
+      },
+      {
+        "code": "04",
+        "name": "AA"
+      },
+      {
+        "code": "05",
+        "name": "AA-"
+      },
+      {
+        "code": "06",
+        "name": "A+"
+      },
+      {
+        "code": "07",
+        "name": "其他"
+      }
+    ],
+    "ratingAugment": [
+      {
+        "code": "GUA",
+        "name": "担保人"
+      },
+      {
+        "code": "SEC",
+        "name": "担保物"
+      },
+      {
+        "code": "NON",
+        "name": "无担保"
+      }
+    ],
+    "financialBondType": [
+      {
+        "code": "01",
+        "name": "国开"
+      },
+      {
+        "code": "02",
+        "name": "非国开"
+      }
+    ],
+    "corporateBondType": [
+      {
+        "code": "01",
+        "name": "公募"
+      },
+      {
+        "code": "02",
+        "name": "私募"
+      }
+    ],
+    "couponType": [
+      {
+        "code": "01",
+        "name": "SHIBOR"
+      },
+      {
+        "code": "02",
+        "name": "DEPO"
+      },
+      {
+        "code": "03",
+        "name": "固息"
+      }
+    ],
+    "optionType": [
+      {
+        "code": "01",
+        "name": "含权"
+      },
+      {
+        "code": "02",
+        "name": "不含权"
+      }
+    ],
+    "special": [
+      {
+        "code": "01",
+        "name": "新上市"
+      },
+      {
+        "code": "02",
+        "name": "跨市场"
+      },
+      {
+        "code": "03",
+        "name": "可质押"
+      },
+      {
+        "code": "04",
+        "name": "银行间"
+      },
+      {
+        "code": "05",
+        "name": "交易所"
+      }
+    ],
+    "broker": [
+      {
+        "code": "CFIC",
+        "name": "国际"
+      },
+      {
+        "code": "TPSC",
+        "name": "国利"
+      },
+      {
+        "code": "PATR",
+        "name": "平安"
+      },
+      {
+        "code": "TJXT",
+        "name": "信唐"
+      },
+      {
+        "code": "CBBJ",
+        "name": "中诚"
+      }
+    ]
+  },
+  "result": "success"
+}
